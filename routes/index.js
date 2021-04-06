@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 //Obtains json file and is parsed
-const data = require("../projects.json");
+const data = require("../data.json");
 
 //Renders 'Home' page
 router.get("/", (req, res) => {
@@ -15,7 +15,7 @@ router.get("/about", (req, res) => {
 });
 
 //Renders specific 'Projects' page onselection
-router.get("/projects/:id", (req, res, next) => {
+router.get("/data/:id", (req, res, next) => {
   const project = data.projects[req.params.id];
 
   //This conditional will lead to next render
