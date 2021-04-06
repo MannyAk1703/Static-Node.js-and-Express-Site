@@ -20,7 +20,7 @@ app.use((req, res) => {
 
   console.log(err);
   res.status(404);
-  res.render("not_found", { err });
+  res.render("page-not-found", { err });
 });
 
 // Handle remaining errors
